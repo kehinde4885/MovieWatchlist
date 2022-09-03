@@ -2,6 +2,7 @@
 *, *::after , *::before{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html{
@@ -14,12 +15,13 @@ body{
 
 main{
     width: 550px;
+    height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-auto-rows: max-content auto;
+    
 }
 
 header {
-    position: relative;
     display: grid;
     padding: 0 8%;
     background-image: linear-gradient(180deg, rgba(0,0,0,0.6166841736694677) 2%, rgba(0,0,0,0.7175245098039216) 97%) ,
@@ -56,7 +58,6 @@ header {
 
 form{
     display: flex;
-    align-items: stretch;
     position: relative;
     top: 50%;
 }
@@ -108,5 +109,96 @@ form button{
 
 section{
     display: grid;
+    padding: 8%;
+    align-items: center;
+    justify-items: center;
+}
+
+.explore{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #dfdddd;
+    text-align: center;
+}
+
+.item{
+    align-self: flex-start;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content auto;
+    align-items: center;
+    padding: 2em 0;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.item img{
+
+}
+
+.item div:nth-of-type(2){
+    padding-left: 2.5em;
     
+}
+
+.movie{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+
+.movie p:nth-child(1){
+    font-size: 2rem;
+    font-weight: 500;
+    flex-basis: 50%;
+    
+}
+
+
+.movie p:nth-child(2){
+    flex-basis: 50%;
+    align-self: flex-start;
+    display: flex;
+}
+
+.movie p:nth-child(2) span{
+    margin-left: .5em;
+}
+
+.movie p:nth-child(3){
+    font-weight: 500;
+   
+}
+
+
+.movie p:nth-child(4){
+    font-weight: 500;
+}
+
+.movie button{
+    align-self: center;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+
+}
+
+.movie button img{
+    width: 20px;
+    border-radius: 50%;
+    margin-right: .5em;
+}
+
+.plot{
+    font-size: 1.6rem;
+    color: #6B7280;
+    margin-top: .5em;
+
 }
